@@ -1,0 +1,55 @@
+.conversation-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.conversation-card:hover {
+  background-color: #f0f8ff;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 12px;
+}
+
+.conversation-info {
+  flex-grow: 1;
+}
+
+.conversation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.last-message {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.filters button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: #ecf0f1;
+  cursor: pointer;
+}
+.filters button:hover {
+  background: #d0d3d4;
+}

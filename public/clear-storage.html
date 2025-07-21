@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vider le Cache</title>
+</head>
+<body>
+    <h1>Nettoyage du Cache</h1>
+    <p>Cliquez sur le bouton pour vider le localStorage et créer l'utilisateur avec le bon pseudo :</p>
+    <button onclick="clearAndCreateUser()">Vider le Cache et Créer l'Utilisateur</button>
+    <p id="result"></p>
+    
+    <script>
+    function clearAndCreateUser() {
+        // Vider le localStorage
+        localStorage.clear();
+        
+        // Créer l'utilisateur avec le bon pseudo
+        const correctUser = {
+            id: Date.now().toString(),
+            pseudo: 'jalil',
+            email: 'jalilmails@gmail.com',
+            password: 'votre_mot_de_passe',
+            dateInscription: new Date().toISOString()
+        };
+        
+        localStorage.setItem('users', JSON.stringify([correctUser]));
+        localStorage.setItem('currentUser', JSON.stringify(correctUser));
+        
+        document.getElementById('result').innerHTML = 
+            '<strong style="color: green;">✅ Cache vidé et utilisateur créé avec pseudo: ' + correctUser.pseudo + '</strong><br>' +
+            '<a href="/">Retourner à l\'application</a>';
+    }
+    </script>
+</body>
+</html>
